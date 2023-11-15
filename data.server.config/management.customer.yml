@@ -10,7 +10,7 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
   datasource:
     url: jdbc:mysql://host.docker.internal:3333/customer
-    ##jdbc:mysql://localhost:3333/customer
+
     
     username: root
     password: test123
@@ -25,3 +25,22 @@ eureka:
       
   instance:
     hostname: localhost
+
+#Metrics related configurations
+management:
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+
+      enabled: true
+    gateway:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  metrics:
+    export:
+      prometheus:
+        enabled: true

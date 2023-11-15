@@ -3,4 +3,4 @@ spring:
     name: registry.server
 
   config:
-    import: optional:configserver:http://admin.config:8888
+    import: optional:configserver:http://host.docker.internal:8888

@@ -38,6 +38,31 @@ services:
       - "8888:8888"
     restart: always
 
+  registry.server:
+    image: registry-server:v1
+    ports:
+      - "8889:8889"
+    depends_on:
+      - admin.config
+    restart: always
+
+  administration.api.gateway:
+    image: administration-api-gateway:v1
+    ports:
+      - "8887:8887"
+    depends_on:
+      - admin.config
+    restart: always
+
+  administration.server:
+    image: administration-server:v1
+    ports:
+      - "8890:8890"
+    depends_on:
+      - admin.config
+    restart: always
+
+
   management.customer:
     image: management-customer:v1
     ports:
@@ -48,13 +73,27 @@ services:
       - registry.server
     restart: always
 
-  registry.server:
-    image: registry-server:v1
+  management.product:
+    image: management-product:v1
     ports:
-      - "8889:8889"
+      - "8081:8081"
     depends_on:
+      - ProductManagementMySQL
       - admin.config
+      - registry.server
     restart: always
+
+  management.bill:
+    image: management-bill:v1
+    ports:
+      - "8083:8083"
+    depends_on:
+      - BillManagementMySQL
+      - admin.config
+      - registry.server
+    restart: always
+
+
 
 volumes:
   data-mysqlBill:
