@@ -1,0 +1,17 @@
+DataBase Management
+--------------------------------------------------------
+ProductManagementMySQL                   3307
+CustomerManagementMySQL                  3333
+BillManagementMySQL                      3308
+
+MS-core
+---------------------------------------------------------
+management.product						 8081
+management.customer     				 8082
+management.bill                          8083
+
+MS-Administration
+---------------------------------------------------------
+admin.config						     8888
+registry.server                          8889
+aministration.api.gateway                8887
