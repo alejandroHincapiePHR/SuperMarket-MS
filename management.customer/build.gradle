@@ -36,7 +36,7 @@ dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap:latest.release'
 	implementation 'org.springframework.cloud:spring-cloud-starter-config:latest.release'
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:latest.release'
-//	implementation 'de.codecentric:spring-boot-admin-starter-client:latest.release'
+	implementation 'de.codecentric:spring-boot-admin-starter-client:latest.release'
 	implementation "org.mapstruct:mapstruct:${mapstructVersion}"
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.mysql:mysql-connector-j'

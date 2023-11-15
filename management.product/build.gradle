@@ -49,7 +49,7 @@ dependencies {
 //
 //	// Spring Boot Admin
 //
-//	implementation 'de.codecentric:spring-boot-admin-starter-client:latest.release'
+	implementation 'de.codecentric:spring-boot-admin-starter-client:latest.release'
 
 
 //	Lombok x mapstruct

@@ -7,15 +7,28 @@ spring:
   application:
     name: admin-config
 
-#local config
-  profiles:
-    active: native
+##local config
+#  profiles:
+#    active: native
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          searchLocations: /app/data.server.config
+#
+#          ##file:/C:/Users/AHINCAPIE/Desktop/MS-SuperMarket/data.server.config
+
+
   cloud:
     config:
       server:
-        native:
-          searchLocations: /app/data.server.config
-
-          ##file:/C:/Users/AHINCAPIE/Desktop/MS-SuperMarket/data.server.config
+        git:
+          uri: https://github.com/alejandroHincapiePHR/SuperMarket-MS
+          searchPaths: data.server.config
+          username: alejandroHincapiePHR
+          #password: ${GITHUB_PASSWORD}
+          password: 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
+          default-label: main
+          cloneOnStart: true
 
 
