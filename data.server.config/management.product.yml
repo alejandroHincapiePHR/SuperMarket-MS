@@ -21,6 +21,13 @@ eureka:
     serviceUrl:
       defaultZone: http://host.docker.internal:8889/eureka
 
+  # Admin Client
+  boot:
+    admin:
+      client:
+        url: http://host.docker.internal:8890
+        instance:
+          management-base-url: http://host.docker.internal:8081
 
 #Metrics related configurations
 management:

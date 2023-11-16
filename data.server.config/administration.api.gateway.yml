@@ -16,6 +16,15 @@ spring:
           enabled: true
           lower-case-service-id: true
 
+
+  # Admin Client
+  boot:
+    admin:
+      client:
+        url: http://host.docker.internal:8890
+        instance:
+          management-base-url: http://host.docker.internal:8887
+
 #Metrics related configurations
 management:
   endpoint:
