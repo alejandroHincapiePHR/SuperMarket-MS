@@ -8,7 +8,7 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
   datasource:
-    url: jdbc:mysql://localhost:3308/bill
+    url: jdbc:mysql://host.docker.internal:3308/bill
     username: root
     password: test123
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -18,9 +18,8 @@ eureka:
   client:
     fetch-registry: true
     serviceUrl:
-      defaultZone: http://localhost:8889/eureka
-  instance:
-    hostname: localhost
+      defaultZone: http://host.docker.internal:8889/eureka
+
 
 #Metrics related configurations
 management:

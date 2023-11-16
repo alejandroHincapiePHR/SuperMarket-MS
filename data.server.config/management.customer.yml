@@ -23,8 +23,6 @@ eureka:
     serviceUrl:
       defaultZone: http://host.docker.internal:8889/eureka
       
-  instance:
-    hostname: localhost
 
 #Metrics related configurations
 management:
